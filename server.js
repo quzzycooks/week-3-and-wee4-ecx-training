@@ -14,6 +14,9 @@ app.use(express.json());
 app.get('/', (req, res) => {
     res.send('API is running...');
 });
+// server.js
+app.use('/api/tasks', require('./routes/taskRoutes'));
+app.use('/api/users', require('./routes/userRoutes'));
 
 
 const PORT = 3000;
